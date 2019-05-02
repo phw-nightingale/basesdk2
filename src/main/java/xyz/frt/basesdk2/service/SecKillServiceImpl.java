@@ -91,7 +91,7 @@ public class SecKillServiceImpl implements SecKillService {
 
     @Override
     public Result executeSecKill(Order order) {
-        if (isEnable == 1) {
+        if (true) {
             List<OrderDetail> orderDetails = order.getOrderDetails();
             orderService.insert(order);
             int totalMoney = 0;

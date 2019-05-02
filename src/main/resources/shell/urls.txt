@@ -1,0 +1,1 @@
+http://127.0.0.1:8081/orders POST {"status":0,"address":"四川成都","phone":"17776304754","orderDetails":[{"productId":1,"count":1},{"productId":2,"count":2},{"productId":3,"count":2}]}
