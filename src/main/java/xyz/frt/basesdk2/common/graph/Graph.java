@@ -5,7 +5,7 @@ package xyz.frt.basesdk2.common.graph;
  * 
  * @param <T>
  */
-public interface Graph<T extends Identify> {
+public interface Graph<T> {
 
 	/**
 	 * 插入一个顶点
@@ -18,14 +18,14 @@ public interface Graph<T extends Identify> {
 	/**
 	 * 插入一条边
 	 * 
-	 * @param v1
+	 * @param v0
 	 *            起点位置，从0开始
-	 * @param v2
+	 * @param v1
 	 *            终点位置，从0开始
 	 * @param weight
 	 *            权值
 	 */
-	void insertEdge(int v1, int v2, int weight);
+	void insertEdge(int v0, int v1, int weight);
 
 	/**
 	 * 删除一个顶点
@@ -38,34 +38,34 @@ public interface Graph<T extends Identify> {
 	/**
 	 * 删除一条边
 	 * 
-	 * @param v1
+	 * @param v0
 	 *            起点位置，从0开始
-	 * @param v2
+	 * @param v1
 	 *            终点位置，从0开始
 	 */
-	void deleteEdge(int v1, int v2);
+	void deleteEdge(int v0, int v1);
 
 	/**
 	 * 获得某一条边的权值
 	 * 
-	 * @param v1
+	 * @param v0
 	 *            起点位置，从0开始
-	 * @param v2
+	 * @param v1
 	 *            终点位置，从0开始
 	 */
-	int getWeight(int v1, int v2);
+	int getWeight(int v0, int v1);
 
 	/**
 	 * 设置某条边的权值
 	 * 
-	 * @param v1
+	 * @param v0
 	 *            起点位置，从0开始
-	 * @param v2
+	 * @param v1
 	 *            终点位置，从0开始
 	 * @param weight
 	 *            权值
 	 */
-	void setWeight(int v1, int v2, int weight);
+	void setWeight(int v0, int v1, int weight);
 
 	/**
 	 * 遍历图
@@ -104,7 +104,7 @@ public interface Graph<T extends Identify> {
 	 * 
 	 * @return
 	 */
-	T[] getVertex();
+	Object[] getVertexes();
 
 	/**
 	 * 获取边数

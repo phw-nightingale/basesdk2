@@ -2,8 +2,8 @@ package xyz.frt.basesdk2.common.graph;
 
 public interface Identify {
 
-    long getId();
+    Long getId();
 
-    void setId(long id);
+    void setId(Long id);
 
 }

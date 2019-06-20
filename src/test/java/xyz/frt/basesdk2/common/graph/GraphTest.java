@@ -79,7 +79,7 @@ public class GraphTest {
 
     @Test
     public void getVertexesTest() {
-        Position[] ps = graph.getVertex();
-        System.out.println(ps);
+        graph.getVertexes();
     }
+
 }

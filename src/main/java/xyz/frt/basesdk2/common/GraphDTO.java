@@ -1,18 +1,22 @@
 package xyz.frt.basesdk2.common;
 
-import xyz.frt.basesdk2.common.graph.Identify;
-
-public class GraphDTO<T extends Identify> {
+public class GraphDTO<T> {
 
     private T[] vertexes;
 
     private Integer[][] arcs;
 
+    private int verNum;
+
+    private int arcNum;
+
     public GraphDTO() { }
 
-    public GraphDTO(T[] vertexes, Integer[][] arcs) {
+    public GraphDTO(T[] vertexes, Integer[][] arcs, int verNum, int arcNum) {
         this.vertexes = vertexes;
         this.arcs = arcs;
+        this.verNum = verNum;
+        this.arcNum = arcNum;
     }
 
     public T[] getVertexes() {
@@ -29,5 +33,21 @@ public class GraphDTO<T extends Identify> {
 
     public void setArcs(Integer[][] arcs) {
         this.arcs = arcs;
+    }
+
+    public int getVerNum() {
+        return verNum;
+    }
+
+    public void setVerNum(int verNum) {
+        this.verNum = verNum;
+    }
+
+    public int getArcNum() {
+        return arcNum;
+    }
+
+    public void setArcNum(int arcNum) {
+        this.arcNum = arcNum;
     }
 }
