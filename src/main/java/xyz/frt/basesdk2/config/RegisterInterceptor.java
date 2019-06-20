@@ -26,6 +26,7 @@ public class RegisterInterceptor implements WebMvcConfigurer {
                 .addPathPatterns("/**")
                 .excludePathPatterns(
                         "/test-api/**", // 为了方便测试某些Api，可以暂时写到这下面
+                        "/guide/**",
                         "/authorize",
                         "/users/sign-in",
                         "/users/sign-out",
